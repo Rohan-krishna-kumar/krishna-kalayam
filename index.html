@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRISHNA KALALAYAM — Classical Arts & Bharathanatyam Studio</title>
+    <title>KRISHNA KALALAYAM — Classical Bharathanatyam Conservatory</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,12 +12,18 @@
             theme: {
                 extend: {
                     colors: {
-                        obsidian: '#080808',
-                        studioDark: '#0f0f11',
-                        studioCard: '#141417',
-                        electricBlue: '#0066ff',
-                        cyanGlow: '#00d8ff',
-                        zincBorder: '#27272a'
+                        deepMaroon: '#120104',
+                        templeMaroon: '#2B0408',
+                        cardMaroon: '#3A060C',
+                        templeGold: '#F59E0B',
+                        brightGold: '#FCD34D',
+                        saffron: '#EA580C',
+                        peacockTurquoise: '#0D9488',
+                        brightTurquoise: '#14B8A6',
+                        silkIvory: '#FFFBEB',
+                        mutedIvory: '#D1C7BD',
+                        goldBorder: 'rgba(245, 158, 11, 0.25)',
+                        maroonBorder: '#4A080F'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -36,125 +42,102 @@
     
     <style>
         body {
-            background-color: #080808;
-            color: #e4e4e7;
+            background-color: #120104;
+            color: #FFFBEB;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(139, 0, 0, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 40%);
         }
         .font-mono {
             font-family: 'JetBrains Mono', monospace;
         }
         .studio-border {
-            border-color: #27272a;
+            border-color: rgba(245, 158, 11, 0.22);
         }
         .studio-card {
-            background-color: #121215;
-            border: 1px solid #27272a;
+            background-color: #2B0408;
+            border: 1px solid rgba(245, 158, 11, 0.22);
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .studio-card:hover {
-            border-color: #0066ff;
+            border-color: #FCD34D;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
             transform: translateY(-2px);
         }
-        .glow-text {
-            text-shadow: 0 0 12px rgba(0, 102, 255, 0.5);
+        .gold-glow-text {
+            text-shadow: 0 0 14px rgba(252, 211, 77, 0.45);
         }
-        .cyan-glow-text {
-            text-shadow: 0 0 12px rgba(0, 216, 255, 0.5);
+        .turquoise-glow-text {
+            text-shadow: 0 0 14px rgba(20, 184, 166, 0.45);
         }
-        .electric-btn {
-            background-color: #0066ff;
-            color: #ffffff;
+        .dance-btn {
+            background: linear-gradient(135deg, #EA580C 0%, #D97706 100%);
+            color: #FFFFFF;
             transition: all 0.2s ease;
         }
-        .electric-btn:hover {
-            background-color: #1a75ff;
-            box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
-        }
-        /* Custom print formatting for receipts */
-        @media print {
-            body * {
-                visibility: hidden;
-            }
-            #printableReceipt, #printableReceipt * {
-                visibility: visible;
-            }
-            #printableReceipt {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                background: #ffffff !important;
-                color: #000000 !important;
-                border: 2px solid #000 !important;
-                padding: 40px !important;
-            }
-            #printableReceipt .print-black {
-                color: #000000 !important;
-            }
-            .no-print {
-                display: none !important;
-            }
+        .dance-btn:hover {
+            background: linear-gradient(135deg, #F97316 0%, #F59E0B 100%);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-electricBlue selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-saffron selection:text-white">
 
     <!-- NAVIGATION BAR -->
-    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b studio-border">
+    <header class="sticky top-0 z-50 bg-deepMaroon/95 backdrop-blur-md border-b studio-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Studio Branding -->
             <a href="#home" class="flex items-center gap-4 group">
-                <div class="w-10 h-10 border border-zincBorder bg-studioCard flex items-center justify-center font-mono text-cyanGlow font-bold text-sm tracking-wider group-hover:border-electricBlue transition-colors">
+                <div class="w-10 h-10 border border-templeGold/40 bg-templeMaroon flex items-center justify-center font-mono text-brightGold font-bold text-sm tracking-wider group-hover:border-brightGold">
                     KK
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="text-sm sm:text-base font-bold tracking-tight text-white uppercase font-mono">KRISHNA KALALAYAM</span>
-                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-zinc-800 text-cyanGlow border border-zinc-700">STUDIO</span>
+                        <span class="text-sm sm:text-base font-bold tracking-tight text-brightGold uppercase font-mono">KRISHNA KALALAYAM</span>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-saffron/20 text-brightGold border border-saffron/40">CONSERVATORY</span>
                     </div>
-                    <span class="text-[11px] font-mono text-zinc-400 tracking-wider block uppercase">Classical Arts & Bharathanatyam</span>
+                    <span class="text-[11px] font-mono text-mutedIvory tracking-wider block uppercase">Classical Bharathanatyam Arts</span>
                 </div>
             </a>
 
             <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center space-x-6 text-xs font-mono tracking-wider">
-                <a href="#studio" class="text-zinc-400 hover:text-white transition-colors">01. STUDIO & GURU</a>
-                <a href="#batches" class="text-zinc-400 hover:text-white transition-colors">02. BATCHES</a>
-                <a href="#admission" class="text-zinc-400 hover:text-white transition-colors">03. ADMISSION</a>
-                <a href="#portal" class="text-zinc-400 hover:text-white transition-colors">04. PORTAL</a>
-                <a href="#receipt" class="text-zinc-400 hover:text-white transition-colors">05. RECEIPT</a>
+                <a href="#studio" class="text-mutedIvory hover:text-brightGold transition-colors">01. GURU & ACADEMY</a>
+                <a href="#batches" class="text-mutedIvory hover:text-brightGold transition-colors">02. BATCHES</a>
+                <a href="#admission" class="text-mutedIvory hover:text-brightGold transition-colors">03. ADMISSION</a>
+                <a href="#portal" class="text-mutedIvory hover:text-brightGold transition-colors">04. PORTAL</a>
             </nav>
 
             <!-- Studio Time Status Badge -->
             <div class="hidden sm:flex items-center gap-4 text-xs font-mono">
-                <div class="px-3 py-1.5 bg-studioCard border studio-border rounded flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span class="text-zinc-400">IST:</span>
-                    <span id="liveClock" class="text-cyanGlow font-semibold">00:00:00</span>
+                <div class="px-3 py-1.5 bg-templeMaroon border studio-border rounded flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-mutedIvory">IST:</span>
+                    <span id="liveClock" class="text-brightGold font-semibold">00:00:00</span>
                 </div>
-                <button onclick="togglePortalView()" class="px-3 py-1.5 border studio-border hover:border-electricBlue text-zinc-300 hover:text-white transition-all text-xs font-mono flex items-center gap-2">
-                    <i class="fa-solid fa-lock text-[10px]"></i>
+                <button onclick="togglePortalView()" class="px-3 py-1.5 border studio-border hover:border-brightGold bg-templeMaroon text-silkIvory hover:text-brightGold transition-all text-xs font-bold uppercase">
+                    <i class="fa-solid fa-lock text-[10px] text-templeGold"></i>
                     <span id="portalBtnLabel">ADMIN PORTAL</span>
                 </button>
             </div>
 
             <!-- Mobile Drawer Button -->
-            <button onclick="toggleMobileNav()" class="lg:hidden text-zinc-300 hover:text-white p-2">
+            <button onclick="toggleMobileNav()" class="lg:hidden text-brightGold p-2">
                 <i class="fa-solid fa-bars text-lg"></i>
             </button>
         </div>
 
         <!-- Mobile Drawer -->
-        <div id="mobileDrawer" class="hidden lg:hidden bg-studioDark border-b studio-border px-6 py-4 space-y-3 font-mono text-xs">
-            <a href="#studio" onclick="toggleMobileNav()" class="block text-zinc-300 hover:text-cyanGlow py-1">01. STUDIO</a>
-            <a href="#batches" onclick="toggleMobileNav()" class="block text-zinc-300 hover:text-cyanGlow py-1">02. BATCHES</a>
-            <a href="#admission" onclick="toggleMobileNav()" class="block text-zinc-300 hover:text-cyanGlow py-1">03. ADMISSION</a>
-            <a href="#portal" onclick="toggleMobileNav()" class="block text-zinc-300 hover:text-cyanGlow py-1">04. PORTAL</a>
-            <a href="#receipt" onclick="toggleMobileNav()" class="block text-zinc-300 hover:text-cyanGlow py-1">05. RECEIPT</a>
-            <div class="pt-2 border-t studio-border flex justify-between items-center text-zinc-400">
-                <span>IST TIME: <span id="mobileClock" class="text-cyanGlow">00:00:00</span></span>
-                <button onclick="togglePortalView()" class="px-3 py-1 bg-zinc-800 text-white rounded">PORTAL</button>
+        <div id="mobileDrawer" class="hidden lg:hidden bg-templeMaroon border-b studio-border px-6 py-4 space-y-3 font-mono text-xs">
+            <a href="#studio" onclick="toggleMobileNav()" class="block text-silkIvory hover:text-brightGold py-1">01. GURU & ACADEMY</a>
+            <a href="#batches" onclick="toggleMobileNav()" class="block text-silkIvory hover:text-brightGold py-1">02. BATCHES</a>
+            <a href="#admission" onclick="toggleMobileNav()" class="block text-silkIvory hover:text-brightGold py-1">03. ADMISSION</a>
+            <a href="#portal" onclick="toggleMobileNav()" class="block text-silkIvory hover:text-brightGold py-1">04. PORTAL</a>
+            <div class="pt-2 border-t studio-border flex justify-between items-center text-mutedIvory">
+                <span>IST TIME: <span id="mobileClock" class="text-brightGold">00:00:00</span></span>
+                <button onclick="togglePortalView()" class="px-3 py-1 bg-saffron text-white rounded font-bold">PORTAL</button>
             </div>
         </div>
     </header>
@@ -162,63 +145,69 @@
     <!-- MAIN CONTENT WRAPPER -->
     <main class="flex-grow space-y-24 py-12">
 
-        <!-- HERO EDITORIAL SECTION -->
-        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-            <div class="border studio-border bg-studioDark rounded-none p-8 sm:p-14 relative overflow-hidden">
+        <!-- HERO SECTION -->
+        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+            <div class="border studio-border bg-templeMaroon rounded-none p-8 sm:p-14 relative overflow-hidden shadow-2xl">
+                <!-- Decorative Subtle Radiant Accent -->
+                <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-saffron/10 blur-3xl pointer-events-none"></div>
+
                 <!-- Top Technical Bar -->
-                <div class="flex flex-wrap items-center justify-between gap-4 pb-8 border-b studio-border font-mono text-xs text-zinc-500">
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-8 border-b studio-border font-mono text-xs text-mutedIvory">
                     <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-electricBlue rounded-full"></span>
-                        <span class="text-zinc-300">EST. 2011</span>
-                        <span>/</span>
-                        <span>CHENNAI STUDIO</span>
+                        <span class="w-2.5 h-2.5 bg-saffron rounded-full"></span>
+                        <span class="text-brightGold font-semibold">EST. 2011</span>
+                        <span class="text-templeGold">/</span>
+                        <span>KALAKSHETRA STYLE</span>
                     </div>
-                    <div class="tracking-widest uppercase text-cyanGlow">UNDER THE GUIDANCE OF GURU SMT. A. SUJATHA BALASUBRAMANIYAM</div>
+                    <div class="tracking-widest uppercase text-brightGold font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-om text-saffron"></i>
+                        GURU SMT. SUJATHA BALASUBRAMANIYAN
+                    </div>
                 </div>
 
-                <!-- Main Editorial Headline -->
+                <!-- Hero Editorial Headline -->
                 <div class="py-12 space-y-6 max-w-4xl">
-                    <div class="inline-block font-mono text-xs text-electricBlue tracking-widest uppercase bg-electricBlue/10 border border-electricBlue/30 px-3 py-1">
-                        [ ARCHITECTURAL PRECISION IN CLASSICAL DANCE ]
+                    <div class="inline-block font-mono text-xs text-brightGold tracking-widest uppercase bg-saffron/20 border border-saffron/40 px-3.5 py-1.5">
+                        [ TRADITIONAL RHITHMIC SANCTUARY & ABHINAYA ]
                     </div>
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none uppercase">
-                        GURU A. SUJATHA<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue via-cyanGlow to-white">BALASUBRAMANIYAM'S</span><br>
-                        KRISHNA KALALAYAM.
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-silkIvory tracking-tight leading-none uppercase">
+                        GURU SMT. <span class="text-transparent bg-clip-text bg-gradient-to-r from-brightGold via-saffron to-brightTurquoise gold-glow-text">SUJATHA</span><br>
+                        BALASUBRAMANIYAN'S<br>
+                        <span class="text-brightGold">KRISHNA KALALAYAM</span>
                     </h1>
-                    <p class="text-zinc-400 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-                        An independent Bharathanatyam conservatory founded by Master Guru Smt. A. Sujatha Balasubramaniyam, dedicated to rhythm, expressional mastery (Abhinaya), and structural Margam fluency in an uncompromising studio setting.
+                    <p class="text-silkIvory/80 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        An authentic Bharathanatyam academy dedicated to rhythmic precision (Nritta), classical repertoire (Margam), and emotional expressional mastery (Abhinaya) under the personal tutelage of Guru Smt. Sujatha Balasubramaniyan.
                     </p>
                 </div>
 
                 <!-- Hero Action Row -->
                 <div class="flex flex-wrap items-center gap-4 pt-6 border-t studio-border">
-                    <a href="#admission" class="electric-btn px-6 py-3 font-mono text-xs font-semibold tracking-wider uppercase flex items-center gap-2">
+                    <a href="#admission" class="dance-btn px-6 py-3.5 font-mono text-xs font-bold tracking-wider uppercase flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-user-plus text-xs"></i>
                         <span>INITIATE ENROLLMENT</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
-                    <a href="#batches" class="px-6 py-3 bg-studioCard border studio-border hover:border-zinc-500 text-zinc-300 font-mono text-xs tracking-wider uppercase transition-colors">
-                        EXPLORE SCHEDULE [02]
+                    <a href="#batches" class="px-6 py-3.5 bg-cardMaroon border studio-border hover:border-brightGold text-brightGold font-mono text-xs font-semibold tracking-wider uppercase transition-all">
+                        EXPLORE BATCHES [02]
                     </a>
                 </div>
 
                 <!-- Stat Counters Grid -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-12 mt-12 border-t studio-border font-mono">
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-2xl sm:text-3xl font-bold text-white font-mono" id="statDancersCount">250+</div>
-                        <div class="text-[11px] text-zinc-500 tracking-wider uppercase mt-1">DANCERS TRAINED</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-2xl sm:text-3xl font-bold text-brightGold font-mono" id="statDancersCount">250+</div>
+                        <div class="text-[11px] text-mutedIvory tracking-wider uppercase mt-1">DANCERS TRAINED</div>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-2xl sm:text-3xl font-bold text-cyanGlow font-mono">15+</div>
-                        <div class="text-[11px] text-zinc-500 tracking-wider uppercase mt-1">YEARS TRADITION</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-2xl sm:text-3xl font-bold text-saffron font-mono">15+</div>
+                        <div class="text-[11px] text-mutedIvory tracking-wider uppercase mt-1">YEARS LEGACY</div>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-2xl sm:text-3xl font-bold text-electricBlue font-mono">100%</div>
-                        <div class="text-[11px] text-zinc-500 tracking-wider uppercase mt-1">MARGAM MASTERY</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-2xl sm:text-3xl font-bold text-brightTurquoise font-mono">100%</div>
+                        <div class="text-[11px] text-mutedIvory tracking-wider uppercase mt-1">MARGAM MASTERY</div>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-2xl sm:text-3xl font-bold text-white font-mono">48+</div>
-                        <div class="text-[11px] text-zinc-500 tracking-wider uppercase mt-1">SOLO ARANGETRAMS</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-2xl sm:text-3xl font-bold text-silkIvory font-mono">48+</div>
+                        <div class="text-[11px] text-mutedIvory tracking-wider uppercase mt-1">SOLO ARANGETRAMS</div>
                     </div>
                 </div>
             </div>
@@ -226,100 +215,78 @@
 
         <!-- INDEX / 01 - THE ACADEMY & CURRICULUM -->
         <section id="studio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-            <!-- Section Header Tag -->
             <div class="flex items-center justify-between border-b studio-border pb-4 mb-8 font-mono">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs text-electricBlue font-bold">INDEX / 01</span>
-                    <span class="text-xs text-zinc-500">|</span>
-                    <h2 class="text-sm font-semibold tracking-wider text-white uppercase">THE ACADEMY & MARGAM CURRICULUM</h2>
+                    <span class="text-xs text-brightGold font-bold">INDEX / 01</span>
+                    <span class="text-xs text-templeGold">|</span>
+                    <h2 class="text-sm font-semibold tracking-wider text-silkIvory uppercase">GURU & MARGAM CURRICULUM</h2>
                 </div>
-                <span class="text-xs text-zinc-500 uppercase">GURU / A. SUJATHA BALASUBRAMANIYAM</span>
+                <span class="text-xs text-brightTurquoise uppercase">ARTISTIC DIRECTOR / GURU SMT. SUJATHA BALASUBRAMANIYAM</span>
             </div>
 
-            <!-- Philosophy & Repertoire Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-                <!-- Philosophy Intro -->
                 <div class="lg:col-span-5 studio-card p-8 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <span class="font-mono text-xs text-cyanGlow uppercase tracking-widest">[ STUDIO PHILOSOPHY & PEDAGOGY ]</span>
-                        <h3 class="text-2xl font-bold text-white tracking-tight uppercase">GURU SUJATHA'S CONSERVATORY METHOD</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed font-light">
-                            Under the direct mastership of Smt. A. Sujatha Balasubramaniyam, we treat classical Bharathanatyam as a rigorous discipline combining physical symmetry, footwork metrics, tala rhythm cycles, and emotional Abhinaya immersion.
+                        <span class="font-mono text-xs text-brightGold uppercase tracking-widest">[ ACADEMY PEDAGOGY ]</span>
+                        <h3 class="text-2xl font-bold text-silkIvory tracking-tight uppercase">GURU SUJATHA'S CONSERVATORY METHOD</h3>
+                        <p class="text-mutedIvory text-sm leading-relaxed font-light">
+                            Under the direct mastership of <strong>Guru Smt. Sujatha Balasubramaniyan</strong>, we preserve classical Bharathanatyam as a sacred discipline combining geometry, rhythm, and emotive storytelling in every lesson.
                         </p>
                     </div>
-                    <div class="pt-6 mt-6 border-t studio-border font-mono text-xs text-zinc-500 space-y-2">
-                        <div class="flex justify-between">
-                            <span>ARTISTIC DIRECTOR:</span>
-                            <span class="text-zinc-300">A. Sujatha Balasubramaniyam</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>STYLE TRADITION:</span>
-                            <span class="text-zinc-300">Kalakshetra Restructured</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>FOCUS:</span>
-                            <span class="text-zinc-300">Nritta, Abhinaya & Nattuvangam</span>
-                        </div>
+                    <div class="pt-6 mt-6 border-t studio-border font-mono text-xs text-mutedIvory space-y-2">
+                        <div class="flex justify-between"><span>ARTISTIC DIRECTOR:</span><span class="text-brightGold font-bold">Sujatha Balasubramaniyan</span></div>
+                        <div class="flex justify-between"><span>STYLE TRADITION:</span><span class="text-silkIvory">Kalakshetra Restructured</span></div>
+                        <div class="flex justify-between"><span>FOCUS:</span><span class="text-silkIvory">Nritta, Abhinaya & Nattuvangam</span></div>
                     </div>
                 </div>
 
-                <!-- Repertoire Cards Grid -->
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="studio-card p-6 space-y-3">
-                        <span class="font-mono text-xs text-electricBlue">01.1 // NRITTA BASE</span>
-                        <h4 class="text-base font-bold text-white uppercase font-mono">ADAVUS & TALA</h4>
-                        <p class="text-zinc-400 text-xs leading-relaxed">
-                            Structured mastery of Tatta, Natta, Kuditta Mettu, Mai Adavu, and Sarikkal executed across 3 rhythmic speeds (Kalam).
-                        </p>
+                        <span class="font-mono text-xs text-saffron font-bold">01.1 // NRITTA BASE</span>
+                        <h4 class="text-base font-bold text-brightGold uppercase font-mono">ADAVUS & TALA</h4>
+                        <p class="text-mutedIvory text-xs leading-relaxed">Structured mastery of Tatta, Natta, Kuditta Mettu, Mai Adavu, and Sarikkal executed across 3 rhythmic speeds (Kalam).</p>
                     </div>
 
                     <div class="studio-card p-6 space-y-3">
-                        <span class="font-mono text-xs text-cyanGlow">01.2 // REPERTOIRE</span>
-                        <h4 class="text-base font-bold text-white uppercase font-mono">ALARIPPU & JATHISWARAM</h4>
-                        <p class="text-zinc-400 text-xs leading-relaxed">
-                            Invocation to pure geometric body alignment synchronized with sollukattu rhythmic syllables and swara patterns.
-                        </p>
+                        <span class="font-mono text-xs text-brightTurquoise font-bold">01.2 // REPERTOIRE</span>
+                        <h4 class="text-base font-bold text-brightGold uppercase font-mono">ALARIPPU & JATHISWARAM</h4>
+                        <p class="text-mutedIvory text-xs leading-relaxed">Invocation to pure geometric body alignment synchronized with sollukattu rhythmic syllables and swara patterns.</p>
                     </div>
 
                     <div class="studio-card p-6 space-y-3">
-                        <span class="font-mono text-xs text-electricBlue">01.3 // EXPRESSION</span>
-                        <h4 class="text-base font-bold text-white uppercase font-mono">SHABDAM & VARNAM</h4>
-                        <p class="text-zinc-400 text-xs leading-relaxed">
-                            The centerpiece of Margam: intricate Jathis interspersed with deep, nuanced facial expression (Bhava & Rasa).
-                        </p>
+                        <span class="font-mono text-xs text-saffron font-bold">01.3 // EXPRESSION</span>
+                        <h4 class="text-base font-bold text-brightGold uppercase font-mono">SHABDAM & VARNAM</h4>
+                        <p class="text-mutedIvory text-xs leading-relaxed">The centerpiece of Margam: intricate Jathis interspersed with deep, nuanced facial expression (Bhava & Rasa).</p>
                     </div>
 
                     <div class="studio-card p-6 space-y-3">
-                        <span class="font-mono text-xs text-cyanGlow">01.4 // FINALE</span>
-                        <h4 class="text-base font-bold text-white uppercase font-mono">TILLANA & SLOKAM</h4>
-                        <p class="text-zinc-400 text-xs leading-relaxed">
-                            Climactic rhythmic velocity celebrating sculpturesque poses, ending in serene devotional shlokas.
-                        </p>
+                        <span class="font-mono text-xs text-brightTurquoise font-bold">01.4 // FINALE</span>
+                        <h4 class="text-base font-bold text-brightGold uppercase font-mono">TILLANA & SLOKAM</h4>
+                        <p class="text-mutedIvory text-xs leading-relaxed">Climactic rhythmic velocity celebrating sculpturesque poses, ending in serene devotional shlokas.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Faculty Grid -->
             <div class="studio-card p-8">
-                <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-6 flex justify-between items-center">
+                <div class="font-mono text-xs text-mutedIvory uppercase tracking-wider mb-6 flex justify-between items-center">
                     <span>GURU FACULTY DIRECTORY</span>
-                    <span class="text-cyanGlow">[ FACULTY / 02 ]</span>
+                    <span class="text-brightGold">[ FACULTY / 02 ]</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-mono">
-                    <div class="p-4 bg-obsidian border studio-border space-y-2 border-electricBlue/50">
-                        <div class="text-xs text-electricBlue font-bold">GURU SMT. A. SUJATHA BALASUBRAMANIYAM</div>
-                        <div class="text-xs text-white font-semibold">Founder, Master & Artistic Director</div>
-                        <p class="text-[11px] text-zinc-500 font-sans">Revered Bharathanatyam exponent and choreographer. Directs senior Arangetrams, Margam repertoire, and advanced Abhinaya masterclasses.</p>
+                    <div class="p-4 bg-deepMaroon border studio-border space-y-2 border-saffron/60">
+                        <div class="text-xs text-brightGold font-bold">GURU SMT. SUJATHA BALASUBRAMANIYAN</div>
+                        <div class="text-xs text-saffron font-semibold">Founder, Master & Artistic Director</div>
+                        <p class="text-[11px] text-mutedIvory font-sans">Revered Bharathanatyam exponent and choreographer. Directs senior Arangetrams, Margam repertoire, and advanced Abhinaya mastery.</p>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border space-y-2">
-                        <div class="text-xs text-cyanGlow font-bold">VIDWAN SRI K. NARAYANAN</div>
-                        <div class="text-xs text-white font-semibold">Senior Nattuvangam Master</div>
-                        <p class="text-[11px] text-zinc-500 font-sans">Specialist in Laya precision, complex Tala calculations, and vocal rhythm recitation under Guru Sujatha's guidance.</p>
+                    <div class="p-4 bg-deepMaroon border studio-border space-y-2">
+                        <div class="text-xs text-brightTurquoise font-bold">VIDWAN SRI K. NARAYANAN</div>
+                        <div class="text-xs text-silkIvory font-semibold">Senior Nattuvangam Master</div>
+                        <p class="text-[11px] text-mutedIvory font-sans">Specialist in Laya precision, complex Tala calculations, and vocal rhythm recitation under Guru Sujatha's guidance.</p>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border space-y-2">
-                        <div class="text-xs text-electricBlue font-bold">SMT. ANANYA DEVI</div>
-                        <div class="text-xs text-white font-semibold">Senior Repertoire Instructor</div>
-                        <p class="text-[11px] text-zinc-500 font-sans">Focuses on Abhinaya nuance, Padam interpretation, and youth talent acceleration across beginner and intermediate batches.</p>
+                    <div class="p-4 bg-deepMaroon border studio-border space-y-2">
+                        <div class="text-xs text-brightGold font-bold">SMT. ANANYA DEVI</div>
+                        <div class="text-xs text-silkIvory font-semibold">Senior Repertoire Instructor</div>
+                        <p class="text-[11px] text-mutedIvory font-sans">Focuses on Abhinaya nuance, Padam interpretation, and youth talent acceleration across beginner and intermediate batches.</p>
                     </div>
                 </div>
             </div>
@@ -327,69 +294,63 @@
 
         <!-- INDEX / 02 - BATCHES & SCHEDULE -->
         <section id="batches" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-            <!-- Section Header Tag -->
             <div class="flex items-center justify-between border-b studio-border pb-4 mb-8 font-mono">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs text-electricBlue font-bold">INDEX / 02</span>
-                    <span class="text-xs text-zinc-500">|</span>
-                    <h2 class="text-sm font-semibold tracking-wider text-white uppercase">BATCHES & CLASS SCHEDULE</h2>
+                    <span class="text-xs text-brightGold font-bold">INDEX / 02</span>
+                    <span class="text-xs text-templeGold">|</span>
+                    <h2 class="text-sm font-semibold tracking-wider text-silkIvory uppercase">BATCHES & CLASS SCHEDULE</h2>
                 </div>
-                <span class="text-xs text-zinc-500 uppercase">TIMETABLE MATRIX</span>
+                <span class="text-xs text-mutedIvory uppercase">TIMETABLE MATRIX</span>
             </div>
 
-            <div class="bg-studioDark border studio-border p-6 sm:p-8 space-y-6">
-                <!-- Filter Tabs -->
+            <div class="bg-templeMaroon border studio-border p-6 sm:p-8 space-y-6">
                 <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b studio-border font-mono text-xs">
                     <div class="flex flex-wrap gap-2">
-                        <button onclick="filterScheduleCategory('all')" id="tab-all" class="px-4 py-2 bg-electricBlue text-white font-semibold border border-electricBlue">ALL BATCHES</button>
-                        <button onclick="filterScheduleCategory('weekday')" id="tab-weekday" class="px-4 py-2 bg-studioCard text-zinc-400 hover:text-white border studio-border">WEEKDAY EVENING</button>
-                        <button onclick="filterScheduleCategory('weekend')" id="tab-weekend" class="px-4 py-2 bg-studioCard text-zinc-400 hover:text-white border studio-border">WEEKEND MORNING</button>
-                        <button onclick="filterScheduleCategory('intensive')" id="tab-intensive" class="px-4 py-2 bg-studioCard text-zinc-400 hover:text-white border studio-border">INTENSIVE MARGAM</button>
+                        <button onclick="filterScheduleCategory('all')" id="tab-all" class="px-4 py-2 bg-saffron text-white font-semibold border border-saffron">ALL BATCHES</button>
+                        <button onclick="filterScheduleCategory('weekday')" id="tab-weekday" class="px-4 py-2 bg-cardMaroon text-mutedIvory hover:text-brightGold border studio-border">WEEKDAY EVENING</button>
+                        <button onclick="filterScheduleCategory('weekend')" id="tab-weekend" class="px-4 py-2 bg-cardMaroon text-mutedIvory hover:text-brightGold border studio-border">WEEKEND MORNING</button>
+                        <button onclick="filterScheduleCategory('intensive')" id="tab-intensive" class="px-4 py-2 bg-cardMaroon text-mutedIvory hover:text-brightGold border studio-border">INTENSIVE</button>
                     </div>
-                    <span class="text-zinc-500 hidden sm:inline">[ ALL TIMES IN IST ]</span>
+                    <span class="text-brightGold font-semibold hidden sm:inline">[ ALL TIMES IN IST ]</span>
                 </div>
 
-                <!-- Schedule Cards Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="scheduleGridContainer">
-                    <!-- Dynamic rendering via JavaScript -->
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="scheduleGridContainer"></div>
             </div>
         </section>
 
         <!-- INDEX / 03 - ADMISSION & REGISTRATION -->
         <section id="admission" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-            <!-- Section Header Tag -->
             <div class="flex items-center justify-between border-b studio-border pb-4 mb-8 font-mono">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs text-electricBlue font-bold">INDEX / 03</span>
-                    <span class="text-xs text-zinc-500">|</span>
-                    <h2 class="text-sm font-semibold tracking-wider text-white uppercase">STUDENT REGISTRATION FORM</h2>
+                    <span class="text-xs text-brightGold font-bold">INDEX / 03</span>
+                    <span class="text-xs text-templeGold">|</span>
+                    <h2 class="text-sm font-semibold tracking-wider text-silkIvory uppercase">STUDENT REGISTRATION FORM</h2>
                 </div>
-                <span class="text-xs text-cyanGlow uppercase">[ LIVE STORAGE SYNC ]</span>
+                <span class="text-xs text-brightTurquoise uppercase">[ LIVE STORAGE SYNC ]</span>
             </div>
 
-            <div class="bg-studioDark border studio-border p-6 sm:p-10 relative">
+            <div class="bg-templeMaroon border studio-border p-6 sm:p-10 relative">
                 <div class="mb-8 space-y-2">
-                    <span class="font-mono text-xs text-electricBlue uppercase tracking-widest">[ OFFICIAL ADMISSION INTAKE ]</span>
-                    <h3 class="text-2xl font-bold text-white uppercase font-mono">ENROLLMENT APPLICATION</h3>
-                    <p class="text-zinc-400 text-xs font-light">Enrollment under the direction of Guru Smt. A. Sujatha Balasubramaniyam. Complete all studio registry credentials below.</p>
+                    <span class="font-mono text-xs text-brightGold uppercase tracking-widest">[ OFFICIAL ADMISSION INTAKE ]</span>
+                    <h3 class="text-2xl font-bold text-silkIvory uppercase font-mono">ENROLLMENT APPLICATION</h3>
+                    <p class="text-mutedIvory text-xs font-light">Enrollment under the direction of Guru Smt. Sujatha Balasubramaniyan. Complete all academy registry credentials below.</p>
                 </div>
 
                 <form id="admissionForm" onsubmit="handleFormSubmit(event)" class="space-y-6 font-mono text-xs">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Student Full Name *</label>
-                            <input type="text" id="formName" required placeholder="e.g. Radhika Sundaram" class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Student Full Name *</label>
+                            <input type="text" id="formName" required placeholder="e.g. Radhika Sundaram" class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                         </div>
 
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Age / Category *</label>
-                            <input type="number" id="formAge" required min="5" max="85" placeholder="e.g. 14" class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Age / Category *</label>
+                            <input type="number" id="formAge" required min="5" max="85" placeholder="e.g. 14" class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                         </div>
 
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Selected Batch *</label>
-                            <select id="formBatch" required class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Selected Batch *</label>
+                            <select id="formBatch" required class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                                 <option value="">SELECT BATCH LEVEL</option>
                                 <option value="Salangai Pooja (Beginner)">Salangai Pooja (Beginner) — ₹2,000/mo</option>
                                 <option value="Alarippu & Jathiswaram (Intermediate)">Alarippu & Jathiswaram (Intermediate) — ₹2,800/mo</option>
@@ -399,34 +360,34 @@
                         </div>
 
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Contact Phone *</label>
-                            <input type="tel" id="formPhone" required placeholder="+91 98765 43210" class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Contact Phone *</label>
+                            <input type="tel" id="formPhone" required placeholder="+91 98765 43210" class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                         </div>
 
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Email Address *</label>
-                            <input type="email" id="formEmail" required placeholder="student@studio.com" class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Email Address *</label>
+                            <input type="email" id="formEmail" required placeholder="student@studio.com" class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                         </div>
 
                         <div>
-                            <label class="block text-zinc-400 mb-2 uppercase">Guardian / Parent Name</label>
-                            <input type="text" id="formGuardian" placeholder="Required for minors" class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                            <label class="block text-mutedIvory mb-2 uppercase">Guardian / Parent Name</label>
+                            <input type="text" id="formGuardian" placeholder="Required for minors" class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-zinc-400 mb-2 uppercase">Joining Date *</label>
-                        <input type="date" id="formDate" required class="w-full bg-obsidian border studio-border rounded-none px-4 py-3 text-white focus:outline-none focus:border-electricBlue">
+                        <label class="block text-mutedIvory mb-2 uppercase">Joining Date *</label>
+                        <input type="date" id="formDate" required class="w-full bg-deepMaroon border studio-border rounded-none px-4 py-3 text-silkIvory focus:outline-none focus:border-brightGold">
                     </div>
 
                     <div class="flex items-center gap-3 pt-2">
-                        <input type="checkbox" id="formTerms" required class="w-4 h-4 rounded-none bg-obsidian border-zinc-700 accent-electricBlue">
-                        <label for="formTerms" class="text-zinc-400 text-[11px]">I confirm adherence to the studio discipline code and fee schedules.</label>
+                        <input type="checkbox" id="formTerms" required class="w-4 h-4 rounded-none bg-deepMaroon border-templeGold accent-saffron">
+                        <label for="formTerms" class="text-mutedIvory text-[11px]">I confirm adherence to the academy discipline code and fee schedules.</label>
                     </div>
 
-                    <button type="submit" class="w-full py-4 electric-btn font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
+                    <button type="submit" class="w-full py-4 dance-btn font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg">
                         <i class="fa-solid fa-file-signature"></i>
-                        <span>SUBMIT REGISTRATION & GENERATE RECEIPT</span>
+                        <span>SUBMIT REGISTRATION</span>
                     </button>
                 </form>
             </div>
@@ -434,695 +395,63 @@
 
         <!-- INDEX / 04 - STUDIO PORTAL & STUDENT REGISTRY -->
         <section id="portal" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-            <!-- Section Header Tag -->
             <div class="flex items-center justify-between border-b studio-border pb-4 mb-8 font-mono">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs text-electricBlue font-bold">INDEX / 04</span>
-                    <span class="text-xs text-zinc-500">|</span>
-                    <h2 class="text-sm font-semibold tracking-wider text-white uppercase">STUDENT REGISTRY & ADMIN PORTAL</h2>
+                    <span class="text-xs text-brightGold font-bold">INDEX / 04</span>
+                    <span class="text-xs text-templeGold">|</span>
+                    <h2 class="text-sm font-semibold tracking-wider text-silkIvory uppercase">STUDENT REGISTRY & ADMIN PORTAL</h2>
                 </div>
                 <div class="flex items-center gap-2 text-xs">
-                    <span id="portalLockStatus" class="text-rose-400 font-mono">[ LOCKED / AUTH REQUIRED ]</span>
+                    <span id="portalLockStatus" class="text-saffron font-mono">[ LOCKED / AUTH REQUIRED ]</span>
                 </div>
             </div>
 
-            <!-- Portal Dashboard Container -->
-            <div class="bg-studioDark border studio-border p-6 sm:p-8 space-y-6">
-                
-                <!-- Admin Auth Banner / Top Bar -->
+            <div class="bg-templeMaroon border studio-border p-6 sm:p-8 space-y-6">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b studio-border font-mono text-xs">
                     <div>
-                        <h3 class="text-lg font-bold text-white uppercase">DATABASE MANAGEMENT</h3>
-                        <p class="text-zinc-500 text-[11px]">Manage dancer profiles, filter fee statuses, and export studio data.</p>
+                        <h3 class="text-lg font-bold text-brightGold uppercase">ACADEMY DATABASE MANAGEMENT</h3>
+                        <p class="text-mutedIvory text-[11px]">Manage dancer profiles, filter fee statuses, and export conservatory records.</p>
                     </div>
 
                     <div class="flex flex-wrap items-center gap-3">
-                        <button onclick="exportDataCSV()" class="px-3 py-2 bg-obsidian border studio-border hover:border-zinc-500 text-zinc-300 flex items-center gap-2">
-                            <i class="fa-solid fa-file-csv text-cyanGlow"></i> EXPORT CSV
+                        <button onclick="exportDataCSV()" class="px-3 py-2 bg-deepMaroon border studio-border hover:border-brightGold text-silkIvory flex items-center gap-2">
+                            <i class="fa-solid fa-file-csv text-brightGold"></i> EXPORT CSV
                         </button>
-                        <button onclick="exportDataJSON()" class="px-3 py-2 bg-obsidian border studio-border hover:border-zinc-500 text-zinc-300 flex items-center gap-2">
-                            <i class="fa-solid fa-code text-electricBlue"></i> EXPORT JSON
+                        <button onclick="exportDataJSON()" class="px-3 py-2 bg-deepMaroon border studio-border hover:border-brightGold text-silkIvory flex items-center gap-2">
+                            <i class="fa-solid fa-code text-brightTurquoise"></i> EXPORT JSON
                         </button>
-                        <button onclick="openAddModal()" class="px-4 py-2 electric-btn font-semibold flex items-center gap-2">
+                        <button onclick="openAddModal()" class="px-4 py-2 dance-btn font-bold flex items-center gap-2">
                             <i class="fa-solid fa-plus"></i> ADD RECORD
                         </button>
                     </div>
                 </div>
 
-                <!-- Registry Stats Summary Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono">
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-xs text-zinc-500 uppercase">TOTAL ENROLLED</div>
-                        <div class="text-2xl font-bold text-white mt-1" id="dashTotal">0</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-xs text-mutedIvory uppercase">TOTAL ENROLLED</div>
+                        <div class="text-2xl font-bold text-silkIvory mt-1" id="dashTotal">0</div>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-xs text-zinc-500 uppercase">ACTIVE / PAID</div>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-xs text-mutedIvory uppercase">ACTIVE / PAID</div>
                         <div class="text-2xl font-bold text-emerald-400 mt-1" id="dashPaid">0</div>
                     </div>
-                    <div class="p-4 bg-obsidian border studio-border">
-                        <div class="text-xs text-zinc-500 uppercase">FEE PENDING</div>
-                        <div class="text-2xl font-bold text-rose-400 mt-1" id="dashPending">0</div>
-                    </div>
-                </div>
-
-                <!-- Search & Filters -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-between font-mono text-xs">
-                    <div class="relative flex-grow max-w-md">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"></i>
-                        <input type="text" id="searchInput" oninput="renderStudentTable()" placeholder="SEARCH NAME, ID, EMAIL..." class="w-full bg-obsidian border studio-border pl-9 pr-4 py-2.5 text-white focus:outline-none focus:border-electricBlue">
-                    </div>
-
-                    <div class="flex gap-3">
-                        <select id="filterBatch" onchange="renderStudentTable()" class="bg-obsidian border studio-border text-zinc-300 px-3 py-2.5 focus:outline-none focus:border-electricBlue">
-                            <option value="ALL">ALL BATCHES</option>
-                            <option value="Salangai Pooja (Beginner)">BEGINNER</option>
-                            <option value="Alarippu & Jathiswaram (Intermediate)">INTERMEDIATE</option>
-                            <option value="Varnam & Arangetram (Senior)">SENIOR</option>
-                            <option value="Adult & Weekend Special">ADULT/WEEKEND</option>
-                        </select>
-
-                        <select id="filterStatus" onchange="renderStudentTable()" class="bg-obsidian border studio-border text-zinc-300 px-3 py-2.5 focus:outline-none focus:border-electricBlue">
-                            <option value="ALL">ALL STATUSES</option>
-                            <option value="ACTIVE">ACTIVE</option>
-                            <option value="ENROLLED">ENROLLED</option>
-                            <option value="PENDING">PENDING</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Student Table -->
-                <div class="border studio-border overflow-x-auto">
-                    <table class="w-full text-left font-mono text-xs">
-                        <thead class="bg-obsidian text-zinc-400 uppercase border-b studio-border">
-                            <tr>
-                                <th class="py-3 px-4">STUDENT ID</th>
-                                <th class="py-3 px-4">NAME & GUARDIAN</th>
-                                <th class="py-3 px-4">BATCH</th>
-                                <th class="py-3 px-4">CONTACT</th>
-                                <th class="py-3 px-4">STATUS</th>
-                                <th class="py-3 px-4 text-right">ACTIONS</th>
-                            </tr>
-                        </thead>
-                        <tbody id="studentTableBody" class="divide-y divide-zinc-800 text-zinc-300">
-                            <!-- Rows rendered dynamically -->
-                        </tbody>
-                    </table>
-            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-                <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 uppercase mb-6">
-                    Tradition • Precision • Expression
-                </span>
-                <h1 class="text-4xl md:text-6xl font-serif font-bold text-slate-100 tracking-tight leading-tight mb-6">
-                    Krishna Kalalayam <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200">
-                        Bharathanatyam Dance Academy
-                    </span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                    Preserving the rich heritage of Kalakshetra style classical dance under the artistic leadership of <strong class="text-amber-300 font-medium">Guru Smt. Sujatha Balasubramaniyam</strong>.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button onclick="document.getElementById('enrollment-section').scrollIntoView({behavior:'smooth'})" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-semibold shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5">
-                        Enroll Now
-                    </button>
-                    <button onclick="document.getElementById('about-section').scrollIntoView({behavior:'smooth'})" class="w-full sm:w-auto px-8 py-3.5 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium backdrop-blur-md transition-all">
-                        Explore Courses
-                    </button>
-                </div>
-            </div>
-
-            <!-- PRINTABLE RECEIPT CARD -->
-            <div id="printableReceipt" class="bg-studioDark border studio-border p-8 space-y-8 font-mono relative">
-                <!-- Receipt Header -->
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b studio-border pb-6 gap-4">
-                    <div>
-                        <div class="text-xs text-electricBlue font-bold tracking-widest uppercase print-black">OFFICIAL STUDIO RECEIPT</div>
-                        <h3 class="text-2xl font-extrabold text-white tracking-tight uppercase mt-1 print-black">KRISHNA KALALAYAM</h3>
-                        <p class="text-[11px] text-zinc-400 print-black">Founder & Master: Guru Smt. A. Sujatha Balasubramaniyam • Chennai</p>
-                    </div>
-                    <div class="sm:text-right">
-                        <div class="text-xs text-zinc-500 print-black">RECEIPT NO: <span id="recNum" class="text-cyanGlow font-bold print-black">#KK-REC-2026-00</span></div>
-                        <div class="text-xs text-zinc-500 mt-1 print-black">DATE: <span id="recDate" class="text-white print-black">2026-10-11</span></div>
-                    </div>
-                </div>
-
-                <!-- Student & Batch Details Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
-                    <div class="space-y-1">
-                        <div class="text-zinc-500 print-black">STUDENT NAME:</div>
-                        <div class="text-base font-bold text-white print-black" id="recStudentName">SELECT A STUDENT PROFILE</div>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="text-zinc-500 print-black">STUDENT ID:</div>
-                        <div class="text-base font-bold text-cyanGlow print-black" id="recStudentId">KK-0000</div>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="text-zinc-500 print-black">SELECTED BATCH:</div>
-                        <div class="text-sm font-semibold text-white print-black" id="recBatch">N/A</div>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="text-zinc-500 print-black">GUARDIAN / CONTACT:</div>
-                        <div class="text-sm font-semibold text-white print-black" id="recGuardian">N/A</div>
-                    </div>
-                </div>
-
-                <!-- Itemized Fee Calculation Table -->
-                <div class="border studio-border p-4 bg-obsidian space-y-3">
-                    <div class="flex justify-between text-xs text-zinc-400 border-b studio-border pb-2 print-black">
-                        <span>DESCRIPTION</span>
-                        <span>AMOUNT</span>
-                    </div>
-                    <div class="flex justify-between text-xs text-zinc-300 print-black">
-                        <span>Studio Registration & Admission Fee</span>
-                        <span>₹1,000</span>
-                    </div>
-                    <div class="flex justify-between text-xs text-zinc-300 print-black">
-                        <span>First Month Tuition Fee</span>
-                        <span id="recTuitionFee">₹2,000</span>
-                    </div>
-                    <div class="flex justify-between text-sm font-bold text-cyanGlow pt-2 border-t studio-border print-black">
-                        <span>TOTAL AMOUNT RECORDED:</span>
-                        <span id="recTotalFee">₹3,000</span>
-                    </div>
-                </div>
-
-                <!-- Signoff & Seal -->
-                <div class="flex justify-between items-end pt-6 text-[11px] text-zinc-500 print-black">
-                    <div>
-                        <p>STATUS: <span id="recStatusBadge" class="text-emerald-400 font-bold print-black">[ RECORDED & VALID ]</span></p>
-                        <p class="mt-1">Computer Generated Studio Receipt. Krishna Kalalayam Conservatory.</p>
-                    </div>
-                    <div class="text-center space-y-1">
-                        <div class="w-48 border-b studio-border mb-1"></div>
-                        <p class="uppercase text-[10px] font-bold text-zinc-300 print-black">GURU A. SUJATHA BALASUBRAMANIYAM</p>
-                        <p class="uppercase text-[9px] text-zinc-500 print-black">ARTISTIC DIRECTOR & FOUNDER</p>
+                    <div class="p-4 bg-deepMaroon border studio-border">
+                        <div class="text-xs text-mutedIvory uppercase">FEE PENDING</div>
+                        <div class="text-2xl font-bold text-saffron mt-1" id="dashPending">0</div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="faculty-section" class="py-20 bg-slate-950">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-xs uppercase font-semibold text-amber-400 tracking-widest mb-2">Artistic Leadership</h2>
-                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-slate-100">Meet Our Founder & Guru</h3>
-                    <div class="w-16 h-0.5 bg-amber-400 mx-auto mt-4 rounded-full"></div>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 md:p-12 backdrop-blur-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
-                    <div class="lg:col-span-5 relative">
-                        <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-amber-500/30 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&q=80&w=800" alt="Guru Smt. Sujatha Balasubramaniyam" class="w-full h-full object-cover"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider block mb-1">Founder & Managing Director</span>
-                                <h4 class="text-2xl font-serif font-bold text-white">Guru Smt. Sujatha Balasubramaniyam</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:col-span-7 space-y-6 text-slate-300 font-light leading-relaxed">
-                        <h3 class="text-2xl font-serif font-bold text-amber-300">Preserving Classical Sanctity & Technical Precision</h3>
-                        <p>
-                            <strong>Guru Smt. Sujatha Balasubramaniyam</strong> is an accomplished Bharathanatyam exponent, choreographer, and dedicated educator with over two decades of experience in nurturing young talents. Trained under esteemed doyens of classical dance, her methodology blends rigorous technical discipline with soulful abhinaya.
-                        </p>
-                        <p>
-                            Under her guidance, Krishna Kalalayam has groomed hundreds of students through traditional <em>Salangai Poojai</em> and <em>Arangetram</em> milestones, instilling deep cultural reverence and structural perfection in every performer.
-                        </p>
-                        
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800/80">
-                            <div class="p-4 rounded-lg bg-slate-950/50 border border-slate-800">
-                                <span class="block text-2xl font-bold text-amber-400 font-serif">20+</span>
-                                <span class="text-xs text-slate-400">Years Teaching</span>
-                            </div>
-                            <div class="p-4 rounded-lg bg-slate-950/50 border border-slate-800">
-                                <span class="block text-2xl font-bold text-amber-400 font-serif">150+</span>
-                                <span class="text-xs text-slate-400">Arangetrams Conducted</span>
-                            </div>
-                            <div class="p-4 rounded-lg bg-slate-950/50 border border-slate-800 col-span-2 sm:col-span-1">
-                                <span class="block text-2xl font-bold text-amber-400 font-serif">Kalakshetra</span>
-                                <span class="text-xs text-slate-400">Stylistic Tradition</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
 
     </main>
 
-    <!-- PASSCODE AUTH MODAL -->
-    <div id="authModal" class="fixed inset-0 z-50 hidden bg-obsidian/90 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-studioDark border studio-border max-w-sm w-full p-6 space-y-4 font-mono">
-            <div class="flex justify-between items-center border-b studio-border pb-3">
-                <span class="text-xs text-electricBlue font-bold">[ GURU ACCESS LOCK ]</span>
-                <button onclick="closeAuthModal()" class="text-zinc-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <p class="text-xs text-zinc-400">AUTHENTICATE WITH GURU A. SUJATHA BALASUBRAMANIYAM'S ADMIN PASSCODE:</p>
-            <form onsubmit="verifyAdminPasscode(event)" class="space-y-4">
-                <input type="password" id="passcodeInput" placeholder="DEFAULT PASSCODE: admin123" required class="w-full bg-obsidian border studio-border px-4 py-2.5 text-xs text-white text-center tracking-widest focus:outline-none focus:border-electricBlue">
-                <p id="authErrorMsg" class="text-rose-400 text-[10px] text-center hidden">INVALID PASSCODE. DEFAULT IS 'admin123'</p>
-                <button type="submit" class="w-full py-2.5 electric-btn text-xs font-semibold uppercase">AUTHENTICATE</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- ADD/EDIT STUDENT MODAL -->
-    <div id="studentModal" class="fixed inset-0 z-50 hidden bg-obsidian/90 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-studioDark border studio-border max-w-lg w-full p-6 space-y-4 font-mono max-h-[90vh] overflow-y-auto">
-            <div class="flex justify-between items-center border-b studio-border pb-3">
-                <span class="text-xs text-cyanGlow font-bold" id="modalHeaderTitle">[ EDIT DANCER RECORD ]</span>
-                <button onclick="closeStudentModal()" class="text-zinc-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-
-            <form id="studentModalForm" onsubmit="saveStudentModal(event)" class="space-y-4 text-xs">
-                <input type="hidden" id="modalStudentId">
-                <div>
-                    <label class="block text-zinc-400 mb-1 uppercase">Full Name</label>
-                    <input type="text" id="modalName" required class="w-full bg-obsidian border studio-border px-3 py-2 text-white focus:outline-none focus:border-electricBlue">
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-zinc-400 mb-1 uppercase">Age</label>
-                        <input type="number" id="modalAge" required class="w-full bg-obsidian border studio-border px-3 py-2 text-white focus:outline-none focus:border-electricBlue">
-        <div id="receipt-modal-content" class="hidden">
-            <div class="p-8 text-slate-900 bg-white rounded-lg font-sans">
-                <div class="flex justify-between items-start border-b border-slate-200 pb-6 mb-6">
-                    <div>
-                        <h2 class="text-2xl font-serif font-bold text-slate-900">Krishna Kalalayam</h2>
-                        <p class="text-sm text-slate-600">Bharathanatyam Dance Academy</p>
-                        <p class="text-xs text-slate-500 mt-1">Artistic Director: Guru Smt. Sujatha Balasubramaniyam</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-900 font-semibold text-xs rounded-full uppercase">Official Fee Receipt</span>
-                        <p class="text-xs text-slate-500 mt-2" id="receipt-date"></p>
-                        <p class="text-xs font-mono text-slate-400" id="receipt-id"></p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
-                    <div>
-                        <p class="text-xs uppercase text-slate-400 font-semibold">Student Name</p>
-                        <p class="font-medium text-slate-800" id="receipt-student-name">-</p>
-                    </div>
-                    <div>
-                        <p class="text-xs uppercase text-slate-400 font-semibold">Course Enrolled</p>
-                        <p class="font-medium text-slate-800" id="receipt-course">-</p>
-                    </div>
-                </div>
-
-                <div class="border border-slate-200 rounded-lg overflow-hidden mb-8">
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-slate-50 text-slate-600 border-b border-slate-200">
-                            <tr>
-                                <th class="p-3">Description</th>
-                                <th class="p-3 text-right">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-slate-100">
-                                <td class="p-3 text-slate-700">Course Registration & Initial Term Fee</td>
-                                <td class="p-3 text-right font-semibold text-slate-900" id="receipt-amount">₹0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="flex justify-between items-end pt-8 border-t border-slate-200">
-                    <div class="text-xs text-slate-500 max-w-xs">
-                        <p>Thank you for choosing Krishna Kalalayam.</p>
-                        <p class="mt-1">Please retain this receipt for future reference.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="font-serif italic text-slate-700 text-lg mb-1">Guru Smt. Sujatha Balasubramaniyam</div>
-                        <div class="w-32 h-0.5 bg-slate-300 mx-auto"></div>
-                        <p class="text-[10px] uppercase tracking-wider text-slate-400 mt-1">Authorized Signature</p>
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-deepMaroon border-t studio-border py-8 text-center font-mono text-xs text-mutedIvory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
+            <p class="text-brightGold">KRISHNA KALALAYAM — CLASSICAL BHARATHANATYAM CONSERVATORY</p>
+            <p>© 2011-2026 Guru Smt. Sujatha Balasubramaniyan. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // --- INITIAL MOCK DATA ---
-        const INITIAL_DANCERS = [
-            { id: "KK-1001", name: "Ananya Sundaram", age: 14, batch: "Alarippu & Jathiswaram (Intermediate)", phone: "+91 98400 12345", email: "ananya@studio.com", guardian: "R. Sundaram", status: "ACTIVE", date: "2026-02-10" },
-            { id: "KK-1002", name: "Meera Krishnan", age: 8, batch: "Salangai Pooja (Beginner)", phone: "+91 97110 54321", email: "meera@studio.com", guardian: "Lakshmi Krishnan", status: "ENROLLED", date: "2026-02-14" },
-            { id: "KK-1003", name: "Pooja Venkat", age: 20, batch: "Varnam & Arangetram (Senior)", phone: "+91 99401 88776", email: "pooja@studio.com", guardian: "S. Venkat", status: "PENDING", date: "2026-03-01" },
-            { id: "KK-1004", name: "Radhika Raman", age: 29, batch: "Adult & Weekend Special", phone: "+91 98840 33221", email: "radhika@studio.com", guardian: "Self", status: "ACTIVE", date: "2026-03-05" }
-        ];
-
-        const SCHEDULE_DATA = [
-            { day: "MON & WED", time: "16:30 - 18:00 IST", level: "Salangai Pooja (Beginner)", fee: "₹2,000 / $60 mo", category: "weekday", instructor: "Smt. Ananya Devi" },
-            { day: "TUE & THU", time: "17:00 - 18:30 IST", level: "Alarippu & Jathiswaram (Intermediate)", fee: "₹2,800 / $80 mo", category: "weekday", instructor: "Guru Smt. A. Sujatha Balasubramaniyam" },
-            { day: "FRI & SAT", time: "17:30 - 19:30 IST", level: "Varnam & Arangetram (Senior)", fee: "₹3,500 / $110 mo", category: "intensive", instructor: "Guru Smt. A. Sujatha Balasubramaniyam" },
-            { day: "SATURDAY", time: "08:00 - 10:30 IST", level: "Adult & Weekend Special", fee: "₹2,500 / $75 mo", category: "weekend", instructor: "Smt. Ananya Devi & Staff" },
-            { day: "SUNDAY", time: "09:00 - 12:00 IST", level: "Nattuvangam & Laya Intensive", fee: "₹3,000 / $90 mo", category: "intensive", instructor: "Vidwan Sri K. Narayanan" }
-        ];
-
-        let isAdminUnlocked = false;
-
-        // --- LOCAL STORAGE DATA HELPERS ---
-        function getDancers() {
-            const data = localStorage.getItem('kk_dancers_registry');
-            if (!data) {
-                localStorage.setItem('kk_dancers_registry', JSON.stringify(INITIAL_DANCERS));
-                return INITIAL_DANCERS;
-            }
-            return JSON.parse(data);
-        }
-
-        function saveDancers(list) {
-            localStorage.setItem('kk_dancers_registry', JSON.stringify(list));
-            renderStudentTable();
-            updateDashboardCounters();
-        }
-
-        // --- LIVE IST CLOCK ---
-        function updateClock() {
-            const now = new Date();
-            const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const timeStr = now.toLocaleTimeString('en-US', options) + ' IST';
-            document.getElementById('liveClock').textContent = timeStr;
-            document.getElementById('mobileClock').textContent = timeStr;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // --- SCHEDULE RENDERING & FILTERS ---
-        function renderSchedules(category = 'all') {
-            const container = document.getElementById('scheduleGridContainer');
-            container.innerHTML = '';
-
-            const filtered = category === 'all' ? SCHEDULE_DATA : SCHEDULE_DATA.filter(s => s.category === category || s.category === 'all');
-
-            filtered.forEach(item => {
-                const card = document.createElement('div');
-                card.className = "studio-card p-6 space-y-4 flex flex-col justify-between font-mono";
-                card.innerHTML = `
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-xs text-zinc-500">
-                            <span class="text-electricBlue font-bold">${item.day}</span>
-                            <span class="px-2 py-0.5 bg-obsidian border studio-border text-zinc-300 text-[10px]">${item.time}</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white uppercase mt-2">${item.level}</h4>
-                        <p class="text-xs text-zinc-400 font-sans"><i class="fa-solid fa-user-tie text-cyanGlow mr-1"></i> ${item.instructor}</p>
-                    </div>
-                    <div class="pt-4 border-t studio-border flex justify-between items-center text-xs">
-                        <span class="text-zinc-500">FEE RATE:</span>
-                        <span class="text-cyanGlow font-bold">${item.fee}</span>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function filterScheduleCategory(cat) {
-            ['all', 'weekday', 'weekend', 'intensive'].forEach(c => {
-                const btn = document.getElementById(`tab-${c}`);
-                if (c === cat) {
-                    btn.className = "px-4 py-2 bg-electricBlue text-white font-semibold border border-electricBlue";
-                } else {
-                    btn.className = "px-4 py-2 bg-studioCard text-zinc-400 hover:text-white border studio-border";
-                }
-            });
-            renderSchedules(cat);
-        }
-
-        // --- PUBLIC REGISTRATION SUBMISSION ---
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const list = getDancers();
-
-            const newDancer = {
-                id: 'KK-' + Math.floor(1000 + Math.random() * 9000),
-                name: document.getElementById('formName').value,
-                age: document.getElementById('formAge').value,
-                batch: document.getElementById('formBatch').value,
-                phone: document.getElementById('formPhone').value,
-                email: document.getElementById('formEmail').value,
-                guardian: document.getElementById('formGuardian').value || 'N/A',
-                status: 'ENROLLED',
-                date: document.getElementById('formDate').value
-            };
-
-            list.push(newDancer);
-            saveDancers(list);
-
-            document.getElementById('admissionForm').reset();
-            showToast('Registration submitted! Generating receipt...');
-            loadReceiptForStudent(newDancer.id);
-            window.location.hash = '#receipt';
-        }
-
-        // --- DASHBOARD TABLE & ACTIONS ---
-        function updateDashboardCounters() {
-            const list = getDancers();
-            document.getElementById('dashTotal').textContent = list.length;
-            document.getElementById('dashPaid').textContent = list.filter(d => d.status === 'ACTIVE' || d.status === 'ENROLLED').length;
-            document.getElementById('dashPending').textContent = list.filter(d => d.status === 'PENDING').length;
-            document.getElementById('statDancersCount').textContent = `${list.length + 240}+`;
-        }
-
-        function renderStudentTable() {
-            const list = getDancers();
-            const tbody = document.getElementById('studentTableBody');
-            const noData = document.getElementById('noDataMsg');
-
-            const search = document.getElementById('searchInput').value.toLowerCase();
-            const batchFilter = document.getElementById('filterBatch').value;
-            const statusFilter = document.getElementById('filterStatus').value;
-
-            tbody.innerHTML = '';
-
-            const filtered = list.filter(d => {
-                const matchSearch = d.name.toLowerCase().includes(search) || d.id.toLowerCase().includes(search) || d.email.toLowerCase().includes(search);
-                const matchBatch = batchFilter === 'ALL' || d.batch === batchFilter;
-                const matchStatus = statusFilter === 'ALL' || d.status === statusFilter;
-                return matchSearch && matchBatch && matchStatus;
-            });
-
-            if (filtered.length === 0) {
-                noData.classList.remove('hidden');
-            } else {
-                noData.classList.add('hidden');
-                filtered.forEach(d => {
-                    const tr = document.createElement('tr');
-                    tr.className = "hover:bg-obsidian/60 transition-colors";
-                    tr.innerHTML = `
-                        <td class="py-3 px-4 font-mono font-bold text-cyanGlow">${d.id}</td>
-                        <td class="py-3 px-4">
-                            <div class="font-bold text-white">${d.name}</div>
-                            <div class="text-[10px] text-zinc-500">AGE: ${d.age} • GUARDIAN: ${d.guardian}</div>
-                        </td>
-                        <td class="py-3 px-4 text-zinc-400">${d.batch}</td>
-                        <td class="py-3 px-4">
-                            <div>${d.phone}</div>
-                            <div class="text-[10px] text-zinc-500">${d.email}</div>
-                        </td>
-                        <td class="py-3 px-4">
-                            <span class="px-2 py-0.5 text-[10px] font-bold border ${d.status === 'ACTIVE' ? 'bg-emerald-950 text-emerald-400 border-emerald-700' : d.status === 'ENROLLED' ? 'bg-blue-950 text-cyanGlow border-blue-700' : 'bg-rose-950 text-rose-400 border-rose-700'}">
-                                ${d.status}
-                            </span>
-                        </td>
-                        <td class="py-3 px-4 text-right space-x-1">
-                            <button onclick="loadReceiptForStudent('${d.id}')" title="Generate Receipt" class="p-1.5 bg-obsidian border studio-border hover:border-cyanGlow text-cyanGlow"><i class="fa-solid fa-receipt"></i></button>
-                            <button onclick="openEditModal('${d.id}')" title="Edit Record" class="p-1.5 bg-obsidian border studio-border hover:border-electricBlue text-electricBlue"><i class="fa-solid fa-pen"></i></button>
-                            <button onclick="deleteStudent('${d.id}')" title="Delete Record" class="p-1.5 bg-obsidian border studio-border hover:border-rose-500 text-rose-400"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    `;
-                    tbody.appendChild(tr);
-                });
-            }
-        }
-
-        function loadReceiptForStudent(id) {
-            const list = getDancers();
-            const dancer = list.find(d => d.id === id);
-            if (!dancer) return;
-
-            document.getElementById('recNum').textContent = '#KK-REC-2026-' + dancer.id.replace('KK-', '');
-            document.getElementById('recDate').textContent = dancer.date || '2026-10-11';
-            document.getElementById('recStudentName').textContent = dancer.name.toUpperCase();
-            document.getElementById('recStudentId').textContent = dancer.id;
-            document.getElementById('recBatch').textContent = dancer.batch.toUpperCase();
-            document.getElementById('recGuardian').textContent = `${dancer.guardian} (${dancer.phone})`;
-
-            let tuition = '₹2,000';
-            let total = '₹3,000';
-            if (dancer.batch.includes('Intermediate')) { tuition = '₹2,800'; total = '₹3,800'; }
-            if (dancer.batch.includes('Senior')) { tuition = '₹3,500'; total = '₹4,500'; }
-            if (dancer.batch.includes('Adult')) { tuition = '₹2,500'; total = '₹3,500'; }
-
-            document.getElementById('recTuitionFee').textContent = tuition;
-            document.getElementById('recTotalFee').textContent = total;
-
-            showToast('Loaded receipt for ' + dancer.name);
-        }
-
-        // --- PASSCODE MODAL & SECURITY ---
-        function togglePortalView() {
-            if (isAdminUnlocked) {
-                showToast('Admin mode already authenticated.');
-                window.location.hash = '#portal';
-            } else {
-                document.getElementById('authModal').classList.remove('hidden');
-            }
-        }
-
-        function closeAuthModal() {
-            document.getElementById('authModal').classList.add('hidden');
-            document.getElementById('authErrorMsg').classList.add('hidden');
-        }
-
-        function verifyAdminPasscode(e) {
-            e.preventDefault();
-            const input = document.getElementById('passcodeInput').value;
-            if (input === 'admin123') {
-                isAdminUnlocked = true;
-                closeAuthModal();
-                document.getElementById('portalLockStatus').textContent = '[ UNLOCKED / GURU MODE ]';
-                document.getElementById('portalLockStatus').className = 'text-emerald-400 font-mono';
-                document.getElementById('portalBtnLabel').textContent = 'PORTAL UNLOCKED';
-                showToast('Passcode verified. Admin access granted.');
-                window.location.hash = '#portal';
-            } else {
-                document.getElementById('authErrorMsg').classList.remove('hidden');
-            }
-        }
-
-        // --- STUDENT MODAL CRUD ---
-        function openAddModal() {
-            if (!isAdminUnlocked) {
-                togglePortalView();
-                return;
-            }
-            document.getElementById('modalHeaderTitle').textContent = '[ ADD NEW DANCER RECORD ]';
-            document.getElementById('modalStudentId').value = '';
-            document.getElementById('studentModalForm').reset();
-            document.getElementById('studentModal').classList.remove('hidden');
-        }
-
-        function openEditModal(id) {
-            if (!isAdminUnlocked) {
-                togglePortalView();
-                return;
-            }
-            const list = getDancers();
-            const d = list.find(item => item.id === id);
-            if (!d) return;
-
-            document.getElementById('modalHeaderTitle').textContent = '[ EDIT DANCER RECORD ]';
-            document.getElementById('modalStudentId').value = d.id;
-            document.getElementById('modalName').value = d.name;
-            document.getElementById('modalAge').value = d.age;
-            document.getElementById('modalStatus').value = d.status;
-            document.getElementById('modalBatch').value = d.batch;
-            document.getElementById('modalPhone').value = d.phone;
-            document.getElementById('modalEmail').value = d.email;
-            document.getElementById('modalGuardian').value = d.guardian;
-
-            document.getElementById('studentModal').classList.remove('hidden');
-        }
-
-        function closeStudentModal() {
-            document.getElementById('studentModal').classList.add('hidden');
-        }
-
-        function saveStudentModal(e) {
-            e.preventDefault();
-            const list = getDancers();
-            const id = document.getElementById('modalStudentId').value;
-
-            if (id) {
-                const idx = list.findIndex(item => item.id === id);
-                if (idx !== -1) {
-                    list[idx].name = document.getElementById('modalName').value;
-                    list[idx].age = document.getElementById('modalAge').value;
-                    list[idx].status = document.getElementById('modalStatus').value;
-                    list[idx].batch = document.getElementById('modalBatch').value;
-                    list[idx].phone = document.getElementById('modalPhone').value;
-                    list[idx].email = document.getElementById('modalEmail').value;
-                    list[idx].guardian = document.getElementById('modalGuardian').value;
-                }
-            } else {
-                const newRecord = {
-                    id: 'KK-' + Math.floor(1000 + Math.random() * 9000),
-                    name: document.getElementById('modalName').value,
-                    age: document.getElementById('modalAge').value,
-                    status: document.getElementById('modalStatus').value,
-                    batch: document.getElementById('modalBatch').value,
-                    phone: document.getElementById('modalPhone').value,
-                    email: document.getElementById('modalEmail').value,
-                    guardian: document.getElementById('modalGuardian').value || 'N/A',
-                    date: new Date().toISOString().split('T')[0]
-                };
-                list.push(newRecord);
-            }
-
-            saveDancers(list);
-            closeStudentModal();
-            showToast('Dancer record updated.');
-        }
-
-        function deleteStudent(id) {
-            if (!isAdminUnlocked) {
-                togglePortalView();
-                return;
-            }
-            if (confirm(`Remove student ${id} permanently from studio registry?`)) {
-                let list = getDancers();
-                list = list.filter(d => d.id !== id);
-                saveDancers(list);
-                showToast('Dancer record purged.');
-            }
-        }
-
-        // --- DATA EXPORT HANDLERS ---
-        function exportDataCSV() {
-            const list = getDancers();
-            let csv = "data:text/csv;charset=utf-8,ID,Name,Age,Batch,Phone,Email,Guardian,Status,Date\n";
-            list.forEach(d => {
-                csv += `"${d.id}","${d.name}","${d.age}","${d.batch}","${d.phone}","${d.email}","${d.guardian}","${d.status}","${d.date}"\n`;
-            });
-            const link = document.createElement("a");
-            link.href = encodeURI(csv);
-            link.download = "KK_Studio_Dancers_Registry.csv";
-            link.click();
-            showToast('CSV export downloaded.');
-        }
-
-        function exportDataJSON() {
-            const list = getDancers();
-            const str = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(list, null, 2));
-            const link = document.createElement("a");
-            link.href = str;
-            link.download = "KK_Studio_Dancers_Registry.json";
-            link.click();
-            showToast('JSON export downloaded.');
-        }
-
-        // --- UTILITIES ---
-        function toggleMobileNav() {
-            document.getElementById('mobileDrawer').classList.toggle('hidden');
-        }
-
-        function showToast(msg) {
-            const t = document.getElementById('toast');
-            document.getElementById('toastText').textContent = msg;
-            t.classList.remove('hidden');
-            setTimeout(() => t.classList.add('hidden'), 3000);
-        }
-
-        // --- INITIALIZATION ---
-        window.onload = function() {
-            renderSchedules('all');
-            renderStudentTable();
-            updateDashboardCounters();
-
-            // Load initial student for receipt preview
-            const list = getDancers();
-            if (list.length > 0) loadReceiptForStudent(list[0].id);
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
